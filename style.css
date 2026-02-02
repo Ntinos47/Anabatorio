@@ -1,0 +1,97 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url("img/bg05.jpg");
+  background-repeat: no-repeat;
+  
+  background-color: #f3eede;
+}
+
+
+/* Header & navbar */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #f3eedea9;
+  padding: 0;
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 105px;
+}
+
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.logo img {
+  width: 140px;
+  height: 80px;
+}
+
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.nav-links a:hover {
+  color: #e66e25;
+}
+
+/* Optional content area */
+.content {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+.bgimg {
+  object-fit: contain;
+}
+
+.heroText {
+  height: 100vh;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  text-align: left;
+}
+.pageTitle {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #e66e2791; 
+  font-size: 40px;
+  letter-spacing: 0.1cap;
+}
