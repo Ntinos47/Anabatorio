@@ -12,17 +12,16 @@ body {
 }
 
 
-/* Header & navbar */
 header {
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   background: #f3eedecd;
-  padding: 0;
   z-index: 999;
+  transition: all 0.3s ease;
 }
-/* HERO SECTION (below header) */
+
 .hero {
   position: relative;
   width: 100%;
@@ -36,7 +35,6 @@ header {
   object-fit: cover;
 }
 
-/* optional overlay like banner */
 .heroOverlay {
   position: absolute;
   inset: 0;
@@ -60,11 +58,11 @@ header {
 nav {
   max-width: 70%;
   margin: 0 auto;
-  padding: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
+  height: 100px; 
+  transition: all 0.3s ease;
 }
 
 .logo {
@@ -73,9 +71,29 @@ nav {
   font-weight: bold;
 }
 .logo img {
-  width: 140px;
-  height: 80px;
+  width: 160px;
+  height: auto;
+  transition: all 0.3s ease;
 }
+
+
+header.scrolled {
+  background: #f3eede;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+header.scrolled nav {
+  height: 80px; /* SMALL */
+}
+
+header.scrolled .logo img {
+  width: 120px;
+}
+
+header.scrolled .nav-links a {
+  font-size: 17px;
+}
+
 
 
 
@@ -87,21 +105,31 @@ nav {
 }
 
 .nav-links a {
-  color: white;
+  /* color: white;  <-- Remove this line (it creates a conflict with color: black below) */
   text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s;
+  transition: all 0.3s ease; /* Apply transition here so it animates IN and OUT */
   color: black;
   font-weight: bold;
   font-size: 20px;
+  display: inline-block; /* Required for transform to work */
 }
 
 .nav-links a:hover {
   color: #e66e25;
   text-decoration: underline;
-  font-size: 23px;
-  transition: ease 0.5s;
+  /* font-size: 23px; <-- DELETE THIS (Causes layout shift) */
+  transform: scale(1.1); /* Use this instead (Smooth zoom) */
 }
+
+/* Add this to your style.css */
+.nav-links a.active {
+    color: #e66e25;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+
 
 /* Optional content area */
 .content {
@@ -164,15 +192,17 @@ nav {
 }
 
 .wrapCard {
-  width: 80%;
+  width: 90%;
   margin: auto;
   display: flex;
   justify-content: center;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 .card {
-  width: 450px;
+  max-width: 450px;
+  width: 100%;
   margin: 20px;
   background: #fff;
   border: 0.5px solid #d26521c0;
@@ -292,4 +322,12 @@ nav {
 .bannerLogo img {
   width: 250px;
   max-width: 80%;
+}
+
+.aboutP {
+  width: 70%;
+  margin: auto;
+  color:#444;
+  font-size:18px;
+  line-height:1.8;
 }
