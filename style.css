@@ -105,27 +105,24 @@ header.scrolled .nav-links a {
 }
 
 .nav-links a {
-  /* color: white;  <-- Remove this line (it creates a conflict with color: black below) */
   text-decoration: none;
-  transition: all 0.3s ease; /* Apply transition here so it animates IN and OUT */
+  transition: all 0.3s ease;
   color: black;
   font-weight: bold;
   font-size: 20px;
-  display: inline-block; /* Required for transform to work */
+  display: inline-block;
 }
 
 .nav-links a:hover {
   color: #e66e25;
   text-decoration: underline;
-  /* font-size: 23px; <-- DELETE THIS (Causes layout shift) */
-  transform: scale(1.1); /* Use this instead (Smooth zoom) */
+  transform: scale(1.1);
 }
 
-/* Add this to your style.css */
 .nav-links a.active {
-    color: #e66e25;
-    font-weight: bold;
-    text-decoration: underline;
+  color: #e66e25;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 
@@ -269,7 +266,7 @@ header.scrolled .nav-links a {
 }
 
 
-/**Banner**/
+/** Banner **/
 
 .banner {
   position: relative;
@@ -278,7 +275,6 @@ header.scrolled .nav-links a {
   overflow: hidden;
 }
 
-/* Background image */
 .banner img {
   width: 100%;
   height: 100%;
@@ -286,11 +282,10 @@ header.scrolled .nav-links a {
   object-position: bottom;
 }
 
-/* Orange overlay */
 .banner .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(169, 72, 16, 0.87); /* orange overlay */
+  background: rgba(169, 72, 16, 0.87);
   z-index: 1;
 }
 
@@ -306,7 +301,6 @@ header.scrolled .nav-links a {
   padding: 40px 20px 0 20px;
 }
 
-/* Text styling */
 .bnrText p {
   max-width: 900px;
   color: #fff;
@@ -330,4 +324,88 @@ header.scrolled .nav-links a {
   color:#444;
   font-size:18px;
   line-height:1.8;
+}
+
+/** Services Cards **/
+
+.wrapServices {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  padding: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.service {
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+.img-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1.1; 
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 20px 30px 20px;
+  box-sizing: border-box;
+  background: linear-gradient(#000000c2, #3a1b07cf);
+}
+
+.service:hover .overlay {
+  background: linear-gradient(#000000c2, #000000ed);
+}
+
+
+.service p {
+  color: #d96b26;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+  font-family: sans-serif;
+  font-size: 1.1rem;
+}
+
+.serBtn {
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  border: 1.5px solid #d96b26;
+  padding: 8px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.serBtn:hover {
+  background: #d96b26;
+  color: black;
+}
+
+@media (max-width: 900px) {
+  .wrapServices { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .wrapServices { grid-template-columns: 1fr; }
 }
