@@ -196,7 +196,7 @@ header.scrolled .logo img {
   width: 100%;
   margin: 20px;
   background: #fff;
-  border: 0.5px solid #d26521c0;
+  border: 1px solid #d26521c0;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
@@ -536,10 +536,6 @@ header.scrolled .logo img {
   .nav-links.show {
     display: flex;
   }
-
-  .nav-links li {
-    margin-bottom: 15px;
-  }
 }
 
 /* Hamburger animation */
@@ -581,7 +577,7 @@ header.scrolled .logo img {
     position: absolute;
     align-items: center;
     justify-content: center;
-    top: 80px;
+    top: 70px;
     right: 5%;
     width: 200px;
     padding: 20px;
@@ -589,9 +585,7 @@ header.scrolled .logo img {
     border-radius: 8px;
   }
 
-  .nav-links li {
-    margin-bottom: 15px;
-  }
+  
 
   .nav-links a {
     font-size: 16px;
