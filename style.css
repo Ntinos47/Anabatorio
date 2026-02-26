@@ -102,6 +102,11 @@ header.scrolled .logo img {
   padding: 15px;
 }
 
+.nav-links li {
+  width: 100%;
+  text-align: center;
+}
+
 .nav-links a {
   text-decoration: none;
   transition: all 0.3s ease;
@@ -109,6 +114,7 @@ header.scrolled .logo img {
   font-size: 18px;
   display: inline-block;
   font-family: 'Roboto';
+  width: 100%;
 }
 
 .nav-links a:hover {
