@@ -9,3 +9,11 @@ const navLinks = document.querySelectorAll('nav a').forEach(link => {
         link.classList.add('active');
     }
 });
+
+const hamburger = document.getElementById("hamburger");
+const navLink = document.querySelector(".nav-links");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navLink.classList.toggle("show");
+});
