@@ -323,7 +323,7 @@ header.scrolled .logo img {
 }
 
 .aboutP {
-  width: 70%;
+  width: 80%;
   margin: auto;
   color:#444;
   font-size:18px;
@@ -651,6 +651,10 @@ header.scrolled .logo img {
 @media (max-width: 480px) {
   .footer-col h4 {
     font-size: 16px;
+  }
+
+  .services {
+    padding: 0;
   }
 
   .footer-col ul li {
